@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
 
         printf("Name: %s\n", file);
         printf("Type: %s\n", type);
-        printf("Size: %d\n", sb.st_size);
+        printf("Size: %ld\n", sb.st_size);
         
         printf("Permissions: ");
         printf((sb.st_mode & S_IRUSR) ? "r" : "-");
@@ -56,7 +56,7 @@ int main(int argc, char* argv[]){
         printf((sb.st_mode & S_IXOTH) ? "x" : "-");
         printf("\n");
 
-        printf("Inode: %d\n", sb.st_ino);
+        printf("Inode: %lu\n", sb.st_ino);
     }
 
     return 0;
